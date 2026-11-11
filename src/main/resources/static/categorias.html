@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="/js/categorias.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Gestión de categorías</h1>
+
+        <nav>
+            <a href="/index.html">Inicio</a>
+            <a href="/productos.html">Productos</a>
+        </nav>
+
+        <h2 id="tituloFormulario">Registrar categoría</h2>
+
+        <form id="formCategoria">
+            <input type="hidden" id="id">
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Nombre de la categoría"
+                required>
+
+            <textarea
+                id="descripcion"
+                placeholder="Descripción de la categoría"></textarea>
+
+            <button type="submit">Guardar categoría</button>
+            <button type="button" id="cancelar">Cancelar</button>
+        </form>
+
+        <p id="mensaje"></p>
+
+        <h2>Categorías registradas</h2>
+
+        <button type="button" id="actualizar">Actualizar lista</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaCategorias"></tbody>
+        </table>
+    </main>
+</body>
+</html>

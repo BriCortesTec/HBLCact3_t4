@@ -1,4 +1,3 @@
-
 package com.bricortestec.springboot_act3.model;
 
 import jakarta.persistence.*;

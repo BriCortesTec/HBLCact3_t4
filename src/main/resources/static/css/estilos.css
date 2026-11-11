@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background: #edf5ef;
+    color: #344b3c;
+    font-family: Consolas, monospace;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 25px auto;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #c9dfce;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(65, 100, 75, 0.08);
+}
+
+h1, h2 {
+    color: #47765a;
+}
+
+h1 {
+    border-bottom: 2px solid #c5ddca;
+    padding-bottom: 15px;
+}
+
+a {
+    color: #47765a;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input, textarea, select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #c5ddca;
+    border-radius: 7px;
+    background: #f8fbf8;
+    color: #344b3c;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 85px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px 3px;
+    border: none;
+    border-radius: 7px;
+    background: #8dbb98;
+    color: #ffffff;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6e9f7b;
+}
+
+button.editar {
+    background: #a9c9a9;
+    color: #294a34;
+}
+
+button.eliminar {
+    background: #d88f8f;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+th, td {
+    padding: 13px;
+    border: 1px solid #d6e5d9;
+    text-align: left;
+}
+
+th {
+    background: #dcecdf;
+    color: #42694d;
+}
+
+tr:nth-child(even) {
+    background: #f5faf5;
+}
+
+#mensaje {
+    padding: 10px;
+    color: #47765a;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
