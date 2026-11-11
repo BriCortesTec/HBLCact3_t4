@@ -1,0 +1,164 @@
+{
+  "info": {
+    "_postman_id": "b7c4a3e1-6f29-4d2c-9a81-3e7f5b2c1d90",
+    "name": "Act3 - CRUD Spring Boot",
+    "description": "Pruebas CRUD de Categoria y Producto desplegadas en el VPS. Ajustar categoryId y productId en Variables si los IDs reales son distintos.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Categorias",
+      "item": [
+        {
+          "name": "Crear categoria",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Papelería\",\n  \"descripcion\": \"Artículos escolares y de oficina\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{baseUrl}}/api/categorias"
+          }
+        },
+        {
+          "name": "Consultar categorias",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/categorias"
+          }
+        },
+        {
+          "name": "Consultar categoria por ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/categorias/{{categoryId}}"
+          }
+        },
+        {
+          "name": "Actualizar categoria",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Papelería y oficina\",\n  \"descripcion\": \"Artículos escolares y de oficina actualizados\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{baseUrl}}/api/categorias/{{categoryId}}"
+          }
+        },
+        {
+          "name": "Eliminar categoria",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/categorias/{{categoryId}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Productos",
+      "item": [
+        {
+          "name": "Crear producto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Cuaderno profesional\",\n  \"precio\": 85.00,\n  \"descripcion\": \"Cuaderno de 100 hojas\",\n  \"categoria\": { \"id\": {{categoryId}} }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{baseUrl}}/api/productos"
+          }
+        },
+        {
+          "name": "Consultar productos",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/productos"
+          }
+        },
+        {
+          "name": "Consultar producto por ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/productos/{{productId}}"
+          }
+        },
+        {
+          "name": "Actualizar producto",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Cuaderno profesional actualizado\",\n  \"precio\": 95.00,\n  \"descripcion\": \"Cuaderno de 100 hojas con pasta dura\",\n  \"categoria\": { \"id\": {{categoryId}} }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{baseUrl}}/api/productos/{{productId}}"
+          }
+        },
+        {
+          "name": "Eliminar producto",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/productos/{{productId}}"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://157.230.2.215:8085"
+    },
+    {
+      "key": "categoryId",
+      "value": "1"
+    },
+    {
+      "key": "productId",
+      "value": "1"
+    }
+  ]
+}
